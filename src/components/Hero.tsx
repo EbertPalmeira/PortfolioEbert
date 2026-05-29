@@ -38,14 +38,14 @@ const Hero = () => {
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-portfolio-text-muted font-light">
               Desenvolvedor
-              <span className="gradient-text font-semibold"> FullStack</span>
+              <span className="gradient-text font-semibold">  Back-end Java | FullStack</span>
             </p>
           </div>
 
           {/* Description */}
           <div className="animate-fade-in animation-delay-200">
             <p className="text-lg md:text-xl text-portfolio-text-muted leading-relaxed max-w-2xl mx-auto">
-              Criando experiências digitais incríveis com tecnologias modernas
+              Criando APIs robustas e experiências digitais incríveis com tecnologias modernas.
             </p>
           </div>
 

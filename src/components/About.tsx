@@ -4,151 +4,101 @@ import {
   Rocket,
   Heart,
   Coffee,
-  MessageCircle,
-  ChartBar,
-  Brain,
-  Shield,
-  Clock,
 } from "lucide-react";
 
+const skills = [
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "Spring Boot",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+  },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "Supabase",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+];
+
+const stats = [
+  { value: "10+",    label: "Projetos concluídos",    icon: "🚀" },
+  { value: "10+",   label: "Tecnologias dominadas",  icon: "⚙️" },
+  { value: "2",     label: "Linguagens backend",      icon: "🖥️" },
+  { value: "1 ano+",label: "Experiência prática",    icon: "📅" },
+];
+
+const values = [
+  {
+    icon: <Code2 className="w-8 h-8 animate-icon-float" />,
+    title: "Código Limpo",
+    description: "Acredito na importância de escrever código legível, mantível e bem estruturado.",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 animate-icon-glow" />,
+    title: "Inovação",
+    description: "Sempre em busca das tecnologias mais recentes e melhores práticas do mercado.",
+  },
+  {
+    icon: <Heart className="w-8 h-8 animate-icon-pulse" />,
+    title: "Paixão",
+    description: "Apaixonado por transformar ideias em experiências digitais incríveis.",
+  },
+  {
+    icon: <Coffee className="w-8 h-8 animate-icon-float animation-delay-400" />,
+    title: "Dedicação",
+    description: "Comprometido em entregar sempre a melhor solução para cada projeto.",
+  },
+];
+
 const About = () => {
-  const skills = [
-    {
-      name: "React",
-      level: 90,
-      color: "from-portfolio-purple to-portfolio-blue",
-    },
-    {
-      name: "TypeScript",
-      level: 85,
-      color: "from-portfolio-blue to-portfolio-cyan",
-    },
-    {
-      name: "JavaScript",
-      level: 95,
-      color: "from-portfolio-cyan to-portfolio-purple",
-    },
-    {
-      name: "Tailwind CSS",
-      level: 50,
-      color: "from-portfolio-purple to-portfolio-blue",
-    },
-    {
-      name: "Java",
-      level: 60,
-      color: "from-portfolio-cyan to-portfolio-purple",
-    },
-    {
-      name: "Mysql",
-      level: 70,
-      color: "from-portfolio-purple to-portfolio-blue",
-    },
-    {
-      name: "Next.js",
-      level: 60,
-      color: "from-portfolio-blue to-portfolio-cyan",
-    },
-    {
-      name: "Node.js",
-      level: 75,
-      color: "from-portfolio-cyan to-portfolio-purple",
-    },
-  ];
-
-  const values = [
-    {
-      icon: <Code2 className="w-8 h-8 animate-icon-float" />,
-      title: "Código Limpo",
-      description:
-        "Acredito na importância de escrever código legível, maintível e bem estruturado.",
-    },
-    {
-      icon: <Rocket className="w-8 h-8 animate-icon-glow" />,
-      title: "Inovação",
-      description:
-        "Sempre em busca das tecnologias mais recentes e melhores práticas do mercado.",
-    },
-    {
-      icon: <Heart className="w-8 h-8 animate-icon-pulse" />,
-      title: "Paixão",
-      description:
-        "Apaixonado por transformar ideias em experiências digitais incríveis.",
-    },
-    {
-      icon: (
-        <Coffee className="w-8 h-8 animate-icon-float animation-delay-400" />
-      ),
-      title: "Dedicação",
-      description:
-        "Comprometido em entregar sempre a melhor solução para cada projeto.",
-    },
-  ];
-
-  const softSkills = [
-    {
-      icon: <MessageCircle className="w-8 h-8 animate-icon-float" />,
-      title: "Comunicação",
-      subtitle: "Efetiva",
-      description:
-        "Sou uma pessoa comunicativa e transparente, sempre busco facilitar a compreensão e colaboração de todos.",
-    },
-    {
-      icon: <ChartBar className="w-8 h-8 animate-icon-glow" />,
-      title: "Trabalho em",
-      subtitle: "Equipe",
-      description:
-        "Gosto de trabalhar em equipe, principalmente quando o compartilhamento de ideias para alcançar metas e resultados é incentivado.",
-    },
-    {
-      icon: <Brain className="w-8 h-8 animate-icon-pulse" />,
-      title: "Alta",
-      subtitle: "Adaptabilidade",
-      description:
-        "Encaro mudanças com bastante flexibilidade e acredito que me adapto rápido a novas situações para sempre manter a produtividade e o desempenho.",
-    },
-    {
-      icon: <Brain className="w-8 h-8 animate-icon-rotate" />,
-      title: "Mente",
-      subtitle: "Criativa",
-      description:
-        "Uso minha criatividade para desafiar o óbvio e o convencional, encontrando soluções eficazes e inovadoras.",
-    },
-    {
-      icon: (
-        <Shield className="w-8 h-8 animate-icon-glow animation-delay-400" />
-      ),
-      title: "Resiliência",
-      subtitle: "Profissional",
-      description:
-        "Já enfrentei diversos bugs ao longo do caminho. E mesmo assim o objetivo sempre é adaptar a rota e entregar com qualidade.",
-    },
-    {
-      icon: (
-        <Clock className="w-8 h-8 animate-icon-float animation-delay-600" />
-      ),
-      title: "Gestão do",
-      subtitle: "Tempo",
-      description:
-        "Planejo meu tempo de forma consciente, com foco em prazos e entregas, equilibrando produtividade e qualidade.",
-    },
-  ];
-
   return (
     <section id="about" className="section-padding bg-portfolio-dark-light/30">
       <div className="container-max mx-auto">
+
+        {/* Título */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
             Sobre <span className="gradient-text">Mim</span>
           </h2>
           <p className="text-portfolio-text-muted text-lg max-w-2xl mx-auto">
-            Conheça um pouco mais sobre minha trajetória e paixão pela
-            tecnologia
+            Conheça um pouco mais sobre minha trajetória e paixão pela tecnologia
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* About Text */}
-          <div className="space-y-6 animate-fade-in-left">
+        {/* Texto + Tecnologias | Valores */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
+
+          {/* Esquerda: texto + tecnologias */}
+          <div className="space-y-10 animate-fade-in-left">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold gradient-text">
                 Desenvolvedor Fullstack
@@ -156,59 +106,53 @@ const About = () => {
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
                 Sou um desenvolvedor fullstack em início de carreira, com foco
                 na criação de aplicações completas, do back-end ao front-end.
-                Tenho trabalhado com Node.js para o desenvolvimento de APIs e
-                lógica de servidor, e estou expandindo meu conhecimento em Java
-                para projetos mais estruturados.
+                Tenho trabalhado com Node.js e Java para o desenvolvimento de
+                APIs robustas e bem estruturadas.
               </p>
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
-                No front-end, utilizo tecnologias como React e TypeScript para
-                construir interfaces modernas, responsivas e funcionais.
-                Valorizo boas práticas de código, organização e aprendizado
-                constante em cada etapa do desenvolvimento.
+                No front-end, utilizo React e TypeScript para construir
+                interfaces modernas, responsivas e funcionais. Valorizo boas
+                práticas de código, organização e aprendizado constante.
               </p>
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
                 Acredito que a tecnologia tem o poder de transformar ideias em
                 soluções reais. Estou sempre em busca de novos desafios para
-                evoluir como desenvolvedor e criar experiências que gerem valor
-                de verdade.
+                evoluir como desenvolvedor.
               </p>
             </div>
 
-            {/* Skills */}
-            <div className="space-y-4">
+            {/* Ícones de tecnologias */}
+            <div className="space-y-5">
               <h4 className="text-xl font-semibold text-portfolio-text-light">
-                Principais Tecnologias
+                Tecnologias
               </h4>
-              <div className="space-y-3">
-                {skills.map((skill, index) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-portfolio-text-light font-medium">
-                        {skill.name}
-                      </span>
-                      <span className="text-portfolio-text-muted">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-portfolio-dark rounded-full h-2">
-                      <div
-                        className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+              <div className="grid grid-cols-4 sm:grid-cols-5 gap-4">
+                {skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="group flex flex-col items-center gap-2 p-3 rounded-xl border border-portfolio-purple/20 bg-portfolio-dark/40 hover:border-portfolio-purple/50 hover:bg-portfolio-dark/70 transition-all duration-300 hover:-translate-y-1 cursor-default"
+                  >
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <span className="text-[0.65rem] text-portfolio-text-muted group-hover:text-portfolio-text-light transition-colors text-center leading-tight">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Values */}
+          {/* Direita: valores */}
           <div className="animate-fade-in-right">
             <h4 className="text-2xl font-semibold text-portfolio-text-light mb-8">
               Meus Valores
             </h4>
             <div className="grid gap-6">
-              {values.map((value, index) => (
+              {values.map((value) => (
                 <div
                   key={value.title}
                   className="p-6 bg-portfolio-dark/50 rounded-lg border border-portfolio-purple/20 hover:border-portfolio-purple/40 transition-all duration-300 card-hover group"
@@ -232,45 +176,25 @@ const About = () => {
           </div>
         </div>
 
-        {/* Soft Skills Section */}
-        <div className="space-y-16">
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-bold font-poppins mb-4">
-              <span className="gradient-text">Soft Skills</span>
-            </h3>
-            <p className="text-portfolio-text-muted text-lg max-w-2xl mx-auto">
-              Habilidades interpessoais que me ajudam a ser um profissional
-              completo
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in">
-            {softSkills.map((skill, index) => (
-              <div
-                key={skill.title}
-                className="p-6 bg-portfolio-dark/50 rounded-lg border border-portfolio-purple/20 hover:border-portfolio-purple/40 transition-all duration-300 card-hover group text-center"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-gradient-to-r from-portfolio-purple to-portfolio-blue rounded-full text-white group-hover:scale-110 transition-transform">
-                    {skill.icon}
-                  </div>
-                </div>
-                <div className="space-y-2 mb-4">
-                  <h5 className="text-lg font-semibold text-portfolio-text-light">
-                    {skill.title}
-                  </h5>
-                  <h6 className="text-xl font-bold gradient-text">
-                    {skill.subtitle}
-                  </h6>
-                </div>
-                <p className="text-portfolio-text-muted leading-relaxed text-sm">
-                  {skill.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in">
+          {stats.map((stat, index) => (
+            <div
+              key={stat.label}
+              className="group flex flex-col items-center text-center p-6 rounded-xl border border-portfolio-purple/20 bg-portfolio-dark/40 hover:border-portfolio-purple/50 hover:bg-portfolio-dark/60 transition-all duration-300 hover:-translate-y-1"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <span className="text-3xl mb-3">{stat.icon}</span>
+              <span className="text-3xl md:text-4xl font-bold font-poppins gradient-text mb-2">
+                {stat.value}
+              </span>
+              <span className="text-sm text-portfolio-text-muted leading-tight">
+                {stat.label}
+              </span>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
