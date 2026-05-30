@@ -101,18 +101,14 @@ const About = () => {
           <div className="space-y-10 animate-fade-in-left">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold gradient-text">
-                Desenvolvedor Fullstack
+                Desenvolvedor Back-end Java | FullStack
               </h3>
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
-                Sou um desenvolvedor fullstack em início de carreira, com foco
-                na criação de aplicações completas, do back-end ao front-end.
-                Tenho trabalhado com Node.js e Java para o desenvolvimento de
-                APIs robustas e bem estruturadas.
+                Sou um desenvolvedor com foco em Back-end Java, construindo APIs REST robustas com Spring Boot, autenticação JWT e integração com bancos relacionais como PostgreSQL e MySQL.
               </p>
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
-                No front-end, utilizo React e TypeScript para construir
-                interfaces modernas, responsivas e funcionais. Valorizo boas
-                práticas de código, organização e aprendizado constante.
+                No front-end, utilizo React e TypeScript para criar interfaces modernas e responsivas, o que me permite atuar em projetos completos do banco de dados à tela do usuário.
+Aprendo na prática — cada projeto que construí resolveu um problema real, de sistemas para clínicas médicas a plataformas de gestão de estoque. Estou sempre evoluindo e buscando meu primeiro desafio profissional como desenvolvedor.
               </p>
               <p className="text-portfolio-text-muted text-lg leading-relaxed">
                 Acredito que a tecnologia tem o poder de transformar ideias em
